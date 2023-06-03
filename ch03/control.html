@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ch03</title>
+
+    <script>
+        let a = 3;
+
+        if (a > 5) {
+            document.write("(a = " + a + ") bigger than 5");
+        } else {
+            document.write("(a = " + a + ") not bigger than 5");
+        }
+
+        document.write("<br/>")
+        let d;
+        switch (a) {
+            case 1:
+                d = "星期一";
+                break;
+            case 2:
+                d = "星期二";
+                break;
+            case 3:
+                d = "星期三";
+                break;
+            case 4:
+                d = "星期四";
+                break;
+            case 5:
+                d = "星期五";
+                break;
+            case 6:
+                d = "星期六";
+                break;
+            default:
+                d = "星期天";
+        }
+
+        document.write("今天是 " + d);
+
+        for (let i = 0; i < 6; i++) {
+            var str = "<p style='font-size:" + i * 5 + "px'> 差不多 </p>";
+            document.write(str);
+        }
+
+        document.write(102 % 10);
+        document.write("<br/>");
+        document.write(102 / 10);
+        document.write("<br/>");
+        document.write(parseInt(102 / 10));
+        var s = "";
+        for (let i = 100; i < 1000; i++) {
+            a = parseInt((i / 100));
+            b = parseInt(i % 100 / 10)
+            c = i % 10;
+            if (i == (a * a * a + b * b * b + c * c * c)) {
+                s = s + "、" + i;
+            }
+        }
+        document.write("<br/> " + s);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

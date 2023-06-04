@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ch09</title>
+
+  <script>
+    window.onload = function () {
+      oUl = document.getElementById("list");
+      oLi = oUl.getElementsByTagName("li");
+      oLi[2].style.color = "red";
+      oLi[2].innerHTML = "JavaScript";
+
+      oLi2 = oUl.getElementsByClassName("select");
+      oLi2[0].style.color = "blue";
+    }
+  </script>
+</head>
+<body>
+<ul id="list">
+  <li>a</li>
+  <li class="select">b</li>
+  <li>c</li>
+  <li>d</li>
+</ul>
+</body>
+</html>

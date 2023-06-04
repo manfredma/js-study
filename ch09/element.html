@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ch09</title>
+    <script>
+        // 因为是页面的解析顺序是从上到小的，因此此处需要将修改逻辑放置到加载完成之后执行。
+      window.onload = function (){
+        var oDiv = document.getElementById("div1");
+        oDiv.style.color = "red";
+      };
+
+
+    </script>
+</head>
+<body>
+
+    <div id="div1">
+        java script
+
+    </div>
+
+</body>
+</html>

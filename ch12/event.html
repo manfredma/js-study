@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ch12</title>
+    <script>
+
+        addLoadEvent(function () {
+            var oBtn3 = document.getElementById("btn2");
+            oBtn3.onclick = function () {
+                alert("第二次");
+            };
+        });
+        addLoadEvent(function () {
+            var oBtn3 = document.getElementById("btn3");
+            oBtn3.onclick = function () {
+                alert("第三次");
+            };
+        });
+
+        function addLoadEvent(func) {
+            var oldonload = window.onload;
+            if (typeof window.onload != 'function') {
+                window.onload = func;
+            } else {
+                window.onload = function () {
+                    oldonload();
+                    func();
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="btn1" type="button" value="按钮1"/> <br/>
+<input id="btn2" type="button" value="按钮2"/> <br/>
+<input id="btn3" type="button" value="按钮3"/> <br/>
+<input id="btn4" type="button" value="按钮4"/> <br/>
+</body>
+</html>

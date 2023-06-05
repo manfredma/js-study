@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ch12</title>
+    <script>
+        window.onload = function () {
+            function changeColor() {
+                this.style.color = "hotpink";
+            }
+
+            var oDiv = document.getElementsByTagName("div")[0];
+            var oP = document.getElementsByTagName("p")[0];
+
+            oDiv.onclick = changeColor;
+            oP.onclick = changeColor;
+
+
+            var nextLine = document.createElement("br");
+            document.body.appendChild(nextLine);
+
+            var urlE = document.createElement("p");
+            urlE.innerText = window.location.href;
+            document.body.appendChild(urlE);
+
+            var urlS = document.createElement("p");
+            urlS.innerText = window.location.search;
+            document.body.appendChild(urlS);
+
+            var userAgent = document.createElement("p");
+            userAgent.innerText = window.navigator.userAgent;
+            document.body.appendChild(userAgent);
+        }
+
+        setTimeout(function () {
+            window.location.href = "http://www.infoq.cn";
+        }, 20000);
+
+
+    </script>
+</head>
+<body>
+<div> hello, change color</div>
+<p> hello, change color</p>
+</body>
+</html>
